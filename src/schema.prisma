@@ -1,0 +1,15 @@
+// schema.prisma
+
+Define your data model
+model Celebrity {
+  id        Int      @id @default(autoincrement())
+  name      String
+  profession String?
+  imageUrl  String?
+  description String?
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
